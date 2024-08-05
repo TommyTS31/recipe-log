@@ -13,7 +13,7 @@
         />
       </div>
       <div>
-        <label class="block mb-2 text-sm font-medium">Description</label>
+        <label class="block mb-2 text-sm font-medium mt-2">Description</label>
         <textarea
           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 mb-2"
           placeholder="Chicken and rice"
@@ -21,7 +21,7 @@
         />
       </div>
       <div>
-        <label class="block mb-2 text-sm font-medium">Carbs</label>
+        <label class="block mb-2 text-sm font-medium mt-2">Carbs</label>
         <ul class="flex flex-row flex-wrap justify-center w-full">
           <li v-for="carb in carbsChoices" class="flex m-0.5 grow w-1/4 flex-wrap">
             <input
@@ -39,7 +39,7 @@
         </ul>
       </div>
       <div>
-        <label class="block mb-2 text-sm font-medium">Protein</label>
+        <label class="block mb-2 text-sm font-medium mt-2">Protein</label>
         <ul class="flex flex-row flex-wrap justify-center w-full">
           <li v-for="protein in proteinChoices" class="flex m-0.5 grow w-1/4 flex-wrap">
             <input
@@ -56,8 +56,28 @@
           </li>
         </ul>
       </div>
+      <div>
+        <label class="block mb-2 mt-2 text-sm font-medium">Any Extra</label>
+        <input
+          type="text"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 mb-2"
+          placeholder="E.g. Bulgogi sauce required"
+          required
+        />
+      </div>
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-900 mt-2" for="file_input"
+          >Upload an Image</label
+        >
+        <input
+          class="w-full text-blackbg font-medium text-sm bg-white border border-gray-300 file:cursor-pointer cursor-pointer file:border-0 file:py-2.5 file:px-4 file:mr-4 file:bg-blackbg file:hover:bg-black file:text-white rounded-md"
+          id="file_input"
+          type="file"
+        />
+      </div>
+
       <button
-        class="bg-blackbg p-1.5 rounded-md w-full text-white mt-2 hover:bg-black"
+        class="bg-blackbg p-1.5 rounded-md w-full text-white mt-4 hover:bg-black"
         @click="login"
       >
         Create
