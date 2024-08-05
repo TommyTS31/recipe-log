@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center mt-4">
+  <div class="flex justify-center mt-5">
     <div
       class="shadow w-11/12 md:w-3/4 lg:w-1/4 bg-gray-50 font-sans font-medium p-4 rounded-md"
     >
