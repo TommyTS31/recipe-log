@@ -1,6 +1,9 @@
 <template>
   <div class="bg-whitebg">
-    <NavBar />
-    <RecipeList />
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </div>
 </template>
+
+<script setup></script>

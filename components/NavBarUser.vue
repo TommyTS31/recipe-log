@@ -6,16 +6,11 @@
         <p class="font-title font-regular text-lg font-semibold text-black">Recipe Log</p>
       </div>
     </a>
-    <div class="text-white font-sans m-3" v-if="!isLoggedIn">
-      <button class="bg-blackbg hover:bg-black px-3 py-1 rounded-md shadow-sm">
-        Login
-      </button>
-    </div>
-    <div class="text-white font-sans m-3 space-x-3" v-if="isLoggedIn">
+    <div class="text-white font-sans m-3" v-if="isLoggedIn()">
       <a
-        class="bg-blackbg hover:bg-black px-3.5 py-1.5 rounded-md shadow-sm"
+        class="bg-blackbg hover:bg-black px-3 py-1 rounded-md shadow-sm"
         href="/new-recipe"
-        >+ Add Recipe</a
+        >Add Recipe</a
       >
       <button class="text-blackbg hover:text-black px-3 py-1" @click="logout">
         Log Out
@@ -25,24 +20,21 @@
 </template>
 
 <script setup lang="ts">
-const route = useRoute();
-
 const client = useSupabaseClient();
 const {
   data: { user },
 } = await client.auth.getUser();
 
-const isLoggedIn = computed(() => {
+function isLoggedIn() {
   if (user) {
     return true;
   } else {
     return false;
   }
-});
+}
 
 async function logout() {
   await client.auth.signOut();
-  reloadNuxtApp();
   navigateTo("/login");
 }
 </script>
