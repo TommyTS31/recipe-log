@@ -31,8 +31,11 @@
       </div>
       <div>
         <label class="block mb-2 text-sm font-medium">Protein</label>
-        <ul class="flex flex-row flex-wrap justify-center">
-          <li v-for="protein in proteinChoices" class="flex w-1/4 m-0.5">
+        <ul class="flex flex-row flex-wrap justify-center w-full">
+          <li
+            v-for="protein in proteinChoices"
+            class="flex m-0.5 grow basis-1/4 flex-wrap"
+          >
             <input
               type="radio"
               name="Proteins"
