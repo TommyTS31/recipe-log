@@ -58,7 +58,7 @@ const proteinChoices = ref([
   "Chicken (Wings)",
   "Beef (Ground)",
   "Steak",
-  "Pork (Lean/Shoulder)",
+  "Pork (Lean / Shoulder)",
   "Pork (Ground)",
   "Shrimp",
   "Eggs",
