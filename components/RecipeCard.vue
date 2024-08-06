@@ -1,6 +1,7 @@
 <template>
-  <div
+  <a
     class="flex flex-col md:flex-row bg-whitealt shadow-sm hover:shadow-md duration-150 rounded-md border border-gray-200 my-1 mx-0.5 md:mx-1"
+    href="/"
   >
     <div>
       <NuxtImg
@@ -8,14 +9,26 @@
         :src="img(data.publicUrl)"
       />
     </div>
-    <div class="flex flex-col md:self-center my-4 px-3 md:px-0 md:mx-4 md:my-1">
-      <p class="font-sans text-2xl font-semibold">{{ meal_name }}</p>
+    <div class="flex flex-col md:self-center my-3 px-3 md:px-0 md:mx-4 md:my-1">
+      <p class="font-sans text-2xl font-medium">{{ meal_name }}</p>
+      <div class="mt-1 flex space-x-1 text-sm">
+        <span
+          class="px-2 py-1 border rounded-md border-blackbg bg-gray-50 hover:shadow-sm"
+          >{{ carbs }}</span
+        >
+        <span class="px-2 py-1 border rounded-md border-blackbg bg-gray-50">{{
+          protein
+        }}</span>
+        <span class="px-2 py-1 border rounded-md border-blackbg bg-gray-50">{{
+          extra
+        }}</span>
+      </div>
     </div>
-  </div>
+  </a>
 </template>
 
 <script setup lang="ts">
-const prop = defineProps(["meal_name", "image_link"]);
+const prop = defineProps(["meal_name", "image_link", "carbs", "protein", "extra"]);
 const img = useImage();
 const client = useSupabaseClient();
 
