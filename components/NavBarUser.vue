@@ -8,7 +8,7 @@
     </a>
     <div class="text-white font-sans m-3" v-if="isLoggedIn()">
       <a
-        class="bg-blackbg hover:bg-black px-3 py-1 rounded-md shadow-sm"
+        class="bg-black hover:bg-blackbg px-3 py-1 rounded-md shadow-sm"
         href="/new-recipe"
         >Add Recipe</a
       >

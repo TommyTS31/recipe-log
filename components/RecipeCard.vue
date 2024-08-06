@@ -1,7 +1,7 @@
 <template>
-  <a
-    class="flex flex-col md:flex-row bg-whitealt shadow-sm hover:shadow-md duration-150 rounded-md border border-gray-200 my-1 mx-0.5 md:mx-1"
-    href="/"
+  <NuxtLink
+    class="flex flex-col md:flex-row bg-whitealt shadow-sm hover:shadow-md duration-150 rounded-md border border-gray-300 my-1 mx-0.5 md:mx-1"
+    :to="link"
   >
     <div>
       <NuxtImg
@@ -24,28 +24,22 @@
         }}</span>
       </div>
     </div>
-  </a>
+  </NuxtLink>
 </template>
 
 <script setup lang="ts">
-const prop = defineProps(["meal_name", "image_link", "carbs", "protein", "extra"]);
+const prop = defineProps(["meal_name", "image_link", "carbs", "protein", "extra", "id"]);
 const img = useImage();
 const client = useSupabaseClient();
-
+const link = "/meal/" + prop.id;
 function newPath(path: string) {
   const segments = path.split("/");
   segments.shift();
   const newPath = segments.join("/");
-
   return newPath;
 }
-
-console.log(prop.image_link);
-console.log(newPath(prop.image_link));
 
 const { data } = client.storage
   .from("Meal Images")
   .getPublicUrl(newPath(prop.image_link));
-
-console.log(data.publicUrl);
 </script>

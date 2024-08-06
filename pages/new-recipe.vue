@@ -1,9 +1,10 @@
 <template>
   <div class="flex justify-center mt-5">
     <div
-      class="shadow w-11/12 md:w-3/4 lg:w-7/12 bg-gray-50 font-sans font-medium p-4 rounded-md"
+      class="shadow w-11/12 md:w-3/4 lg:w-7/12 bg-gray-50 font-sans font-medium p-4 rounded-md border border-gray-300"
     >
       <div>
+        <p class="font-sans font-semibold text-2xl mb-4">Add New Recipe</p>
         <label class="block mb-2 text-sm font-medium">Meal Name</label>
         <input
           type="text"
@@ -106,6 +107,9 @@ const proteinChoices = ref([
   "Pork (Ground)",
   "Shrimp",
   "Eggs",
+  "Pork (Belly)",
+  "Salmon",
+  "N/A",
 ]);
 const carbsChoices = ref(["Rice", "Noodles"]);
 

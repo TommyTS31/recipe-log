@@ -8,6 +8,7 @@
           :carbs="meal.carbs"
           :protein="meal.protein"
           :extra="meal.extra"
+          :id="meal.id"
         />
       </div>
     </div>
