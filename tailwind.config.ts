@@ -5,7 +5,7 @@ module.exports = {
       colors: {
         whitebg: "#fdfdfd",
         whitealt:"#fdfdfd",
-        blackbg: "#191818",
+        blackbg: "#252525",
       },
       fontFamily: {
         sans: ["Inter","sans-serif"],
