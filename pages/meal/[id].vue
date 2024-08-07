@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center mt-8">
+  <div class="flex justify-center mt-16">
     <div class="w-11/12 lg:w-1/2 font-sans rounded-md">
       <div class="lg:flex lg:justify-between">
         <p class="font-sans text-3xl font-medium mb-3 lg:mb-0">{{ meal.meal_name }}</p>
