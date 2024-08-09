@@ -2,12 +2,12 @@
   <!-- Linear Display Option -->
   <div v-if="displayOption">
     <NuxtLink
-      class="flex flex-col md:flex-row bg-whitealt shadow-sm hover:shadow-md hover:border-gray-400 duration-50 rounded-md border border-gray-300 my-1 mx-0.5"
+      class="flex flex-col md:flex-row bg-white shadow-sm hover:shadow-md hover:border-gray-400 duration-50 rounded-md border border-gray-300 my-1 mx-0.5"
       :to="link"
     >
       <div>
         <NuxtImg
-          class="min-w-44 max-h-56 md:min-w-72 md:max-h-64 w-full object-cover rounded-l-md"
+          class="min-w-44 max-h-56 md:min-w-72 md:max-h-52 w-full object-cover rounded-l-md"
           :src="img(data.publicUrl)"
         />
       </div>
@@ -33,17 +33,17 @@
   <!-- Boxy Display Option -->
   <div v-else>
     <NuxtLink
-      class="flex flex-col md:flex-row bg-whitealt shadow-sm hover:shadow-md hover:border-gray-400 duration-50 rounded-md border border-gray-300 my-1 mx-1"
+      class="flex flex-col md:flex-row bg-white shadow-sm hover:shadow-md hover:border-gray-400 duration-50 rounded-md border border-gray-300 my-1 mx-1"
       :to="link"
     >
       <div>
         <NuxtImg
-          class="min-w-44 max-h-56 md:min-w-44 md:max-h-56 w-full object-cover rounded-l-md"
+          class="min-w-44 max-h-56 md:min-w-44 md:max-h-44 w-full object-cover rounded-l-md"
           :src="img(data.publicUrl)"
         />
       </div>
       <div class="flex flex-col justify-between my-2 px-3 md:px-0 md:mx-4 md:my-3">
-        <p class="font-sans text-md font-medium hover:underline">
+        <p class="font-sans text-sm font-medium hover:underline">
           {{ meal_name }}
         </p>
         <div class="mt-1 flex flex-col space-y-1 text-xs min-w-32 w-min mb-3">

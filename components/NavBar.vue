@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex justify-between md:grid md:grid-cols-3 bg-whitebg border-b border-gray-300 w-full"
+    class="flex justify-between md:grid md:grid-cols-3 bg-white border-b border-gray-300 w-full"
   >
     <div></div>
     <a href="/" class="text-center">

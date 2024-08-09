@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col w-full px-1 sm:w-3/5 md:w-3/4">
+  <div class="flex flex-col w-full px-1 sm:w-3/5 md:w-2/3">
     <div class="flex mt-4">
       <div class="grow">
         <input
